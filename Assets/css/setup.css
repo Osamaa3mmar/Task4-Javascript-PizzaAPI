@@ -1,0 +1,55 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+h1{
+    margin: auto;
+    width: fit-content;
+    margin-top: 50px;
+}
+.cards{
+    width: calc(100% - 120px);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    gap: 10px;
+}
+.card{
+    width: 300px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.card .image{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.image img{
+    width: 100%;
+}
+.card h2{
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.4);
+    color: snow;
+    scale: 0;
+    opacity: 0;
+    transition: 400ms;
+}
+.card:hover h2{
+    scale: 1;
+    opacity: 1;
+}
