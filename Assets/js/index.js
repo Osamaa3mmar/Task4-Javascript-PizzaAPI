@@ -1,5 +1,5 @@
 const cardsCont=document.querySelector(".cards");
-
+const loader=document.querySelector(".loader");
 // Fetching JSON data
 
 async function getData(){
@@ -9,6 +9,7 @@ async function getData(){
     console.log(data);
     console.log(data.recipes);
     fetchDataToComponent(data);
+    loader.style="display:none";
 }
 function fetchDataToComponent(data){
 const cards=data.recipes.map(function(item){
